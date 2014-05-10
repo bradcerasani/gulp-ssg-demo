@@ -15,7 +15,7 @@ var site = {
 gulp.task('html', function() {
   var template = String(fs.readFileSync('templates/page.html'));
 
-  return gulp.src('content/**/*.markdown')
+  return gulp.src('src/**/*.markdown')
     .pipe(frontmatter({
       property: 'meta'
     }))
@@ -32,16 +32,16 @@ gulp.task('html', function() {
       file.contents = new Buffer(html);
       cb(null, file);
     }))
-    .pipe(gulp.dest('public/'));
+    .pipe(gulp.dest('build/'));
 });
 
 gulp.task('watch', function() {
   http.createServer(
-    ecstatic({root: __dirname + '/public/home'})
+    ecstatic({root: __dirname + '/build/home'})
   ).listen(4000);
   console.log("Preview at http://localhost:4000");
 
-  gulp.watch('content/*.markdown', ['html']);
+  gulp.watch('src/*.markdown', ['html']);
   gulp.watch('templates/*.html', ['html']);
 });
 
