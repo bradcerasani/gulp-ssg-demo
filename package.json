@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "ecstatic": "^0.5.3",
+    "event-stream": "^3.1.5",
+    "gulp": "^3.6.2",
+    "gulp-front-matter": "^1.0.0",
+    "gulp-marked": "^0.2.0",
+    "gulp-mustache": "^0.3.1",
+    "gulp-ssg": "^0.4.5",
+    "http": "0.0.0",
+    "mustache": "^0.8.1"
+  }
+}
