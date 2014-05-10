@@ -1,10 +1,10 @@
 # gulp-ssg demo
 
+Requires [node](http://nodejs.org/) and [gulp](http://gulpjs.com/).
+
 This is a working example of static site generation with [gulp-ssg](https://github.com/paulwib/gulp-ssg).
 
-### Installation
-
-Requires [node](http://nodejs.org/) and [gulp](http://gulpjs.com/).
+### Give it a try
 
 Clone the repository:
 ```
