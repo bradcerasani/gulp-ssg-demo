@@ -32,12 +32,12 @@ gulp.task('html', function() {
       file.contents = new Buffer(html);
       cb(null, file);
     }))
-    .pipe(gulp.dest('build/'));
+    .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('watch', function() {
   http.createServer(
-    ecstatic({root: __dirname + '/build/home'})
+    ecstatic({root: __dirname + '/dist/home'})
   ).listen(4000);
   console.log("Preview at http://localhost:4000");
 
